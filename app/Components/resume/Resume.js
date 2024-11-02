@@ -32,7 +32,6 @@ const Card = ({ icon, title, subtitle, year, desc }) => {
     <motion.div 
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5 }}
       className="p-6 rounded-xl bg-[rgba(13,13,35,0.5)] bg-gradient-to-br from-transparent to-[#0d0d23] backdrop-blur-md shadow-lg hover:shadow-xl transition-all duration-300 h-full flex flex-col"
     >
       <div className="flex items-start gap-4 mb-4">

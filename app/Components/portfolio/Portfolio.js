@@ -19,9 +19,9 @@ const Portfolio = () => {
 
   const filterButtons = [
     { name: 'All', value: 'all' },
-    { name: 'Applications', value: 'Applications' },
-    { name: 'Case Study', value: 'Case Study' },
-    { name: 'Design', value: 'Design' }
+    // { name: 'Applications', value: 'Applications' },
+    // { name: 'Case Study', value: 'Case Study' },
+    // { name: 'Design', value: 'Design' }
   ];
 
   return (
