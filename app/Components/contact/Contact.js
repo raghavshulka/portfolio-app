@@ -101,7 +101,7 @@ export default function Contact() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mb-4 md:mb-0">
               <p className="text-sm text-gray-400">
-                Made with ❤️ by{" "}
+                Made with ❤️ by
                 <Link
                   href="https://github.com/raghavshulka"
                   target="_blank"

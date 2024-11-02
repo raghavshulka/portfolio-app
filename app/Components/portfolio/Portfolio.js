@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState } from 'react';
 import Menu from './Menu';
@@ -13,6 +13,7 @@ const Portfolio = () => {
       setItems(Menu);
       return;
     }
+    const updatedItems = Menu.filter(item => item.category === categoryItem); // Filter based on the category
     setItems(updatedItems);
   };
 
@@ -24,32 +25,28 @@ const Portfolio = () => {
   ];
 
   return (
-    <section className="py-20 " id="work">
+    <section className="py-20" id="work">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl text-white font-bold text-white-900 mb-4">
+          <h2 className="text-4xl text-white font-bold mb-4">
             Recent Works
           </h2>
           <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         {/* Filter Buttons */}
-        {/* <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {filterButtons.map((btn) => (
+        <div className="flex justify-center mb-8">
+          {filterButtons.map((button) => (
             <button
-              key={btn.value}
-              onClick={() => filterItem(btn.value)}
-              className={`px-6 py-2 rounded-full transition-all duration-300 ${
-                activeFilter === btn.value
-                  ? 'bg-blue-600 text-white shadow-lg'
-                  : 'bg-white text-white-700 hover:bg-blue-50'
-              } focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2`}
+              key={button.value}
+              onClick={() => filterItem(button.value)}
+              className={`mx-2 py-2 px-4 rounded-full ${activeFilter === button.value ? 'bg-blue-600 text-white' : 'bg-gray-300 text-black'} transition-all duration-300`}
             >
-              {btn.name}
+              {button.name}
             </button>
           ))}
-        </div> */}
+        </div>
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -68,10 +65,10 @@ const Portfolio = () => {
                 {/* Overlay */}
                 <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <a
-                    href={`https://github.com/0x1Luffy`}
+                    href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-white text-white-900 px-6 py-2 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-all duration-300"
+                    className="bg-white text-black px-6 py-2 rounded-full font-medium hover:bg-blue-600 hover:text-white transition-all duration-300"
                   >
                     View Project
                   </a>
@@ -80,15 +77,12 @@ const Portfolio = () => {
 
               {/* Project Info */}
               <div className="p-6">
-                <span className="text-sm font-medium text-blue-600 bg-blue-50 px-3 py-1 rounded-full">
-                  {item.category}
-                </span>
-                <h3 className="text-xl font-bold text-white-900 mt-4">
+                <h3 className="text-xl font-bold text-black mt-4">
                   {item.title}
                 </h3>
                 <div className="mt-4 flex justify-between items-center">
                   <a
-                    href={`https://github.com/0x1Luffy`}
+                    href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-blue-600 hover:text-blue-700 font-medium flex items-center gap-2"
@@ -116,7 +110,7 @@ const Portfolio = () => {
 
         {/* Show when no items match filter */}
         {items.length === 0 && (
-          <div className="text-center text-white-500 mt-12">
+          <div className="text-center text-gray-500 mt-12">
             No projects found for this category.
           </div>
         )}

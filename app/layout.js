@@ -7,11 +7,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
     <head>
-    <title>Chetan-Kesare</title>
+    <title>Himanshu-Shukla</title>
     </head>
       <body>
       {children}
-      <Analytics />
+      <analytics />
       </body>
     </html>
   )
