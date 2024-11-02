@@ -3,9 +3,9 @@
 ```markdown
 # Portfolio Website
 
-Welcome to my portfolio website repository! This project was built using Next.js, CSS, and React hooks like `useState` and `useEffect`. It's a fully responsive website showcasing my skills, projects, and more.
+Welcome to my portfolio website repository! This project was built using Next.js, CSS . It's a fully responsive website showcasing my skills, projects, and more.
 
-🚀 [Live Demo](https://chetan9-portfolio.vercel.app/)
+🚀 [Live Demo](https://portfolio-23fgdosx5-raghavshulkas-projects.vercel.app/)
 
 ## Features
 
@@ -21,14 +21,13 @@ Welcome to my portfolio website repository! This project was built using Next.js
 
 - [Next.js](https://nextjs.org/)
 - CSS for styling
-- React hooks: `useState` and `useEffect`
 
 ## Getting Started
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/your-portfolio-website.git
+git clone https://portfolio-23fgdosx5-raghavshulkas-projects.vercel.app/
 ```
 
 2. Navigate to the project directory:
