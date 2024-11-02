@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -69,7 +69,7 @@ export default function Contact() {
             <div className="space-y-8">
               <div className="text-center">
                 <h3 className="text-2xl font-bold text-white mb-4">
-                  Let's Talk About Everything!
+                  Let&apos;s Talk About Everything!
                 </h3>
                 <p className="text-gray-300">
                   Feel free to reach out for collaborations, opportunities, or
